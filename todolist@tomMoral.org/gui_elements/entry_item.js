@@ -32,8 +32,8 @@ var EntryItem = class EntryItem extends GObject.Object {
         this.newTask = new St.Entry({
             name: "newTaskEntry",
             hint_text: _("New task..."),
-            track_hover: true,
-            can_focus: true
+            // track_hover: true,
+            // can_focus: true
         });
         this.ENT = this.newTask.clutter_text;
         this.ENT.set_max_length(MAX_LENGTH);

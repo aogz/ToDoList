@@ -47,7 +47,7 @@ var SectionItem = class SectionItem extends GObject.Object {
         this._label = new St.Entry({
             style_class: 'task-label',
             text: this.section.name,
-            can_focus: true
+            // can_focus: true
         });
         // add our label by replacing the default label in PopupSubMenuMenuItem
         this.menu_item.actor.add_child(this._label);
@@ -203,7 +203,11 @@ var SectionItem = class SectionItem extends GObject.Object {
     }
     _set_text (){
         // Set text of the label with the counter of tasks
-        this._label.set_text(this.section.name + " (" + this.n_tasks + ")");
+        const text = this.section.name;
+        if (this.n_tasks) {
+            text += " (" + this.n_tasks + ")"
+        }
+        this._label.set_text(text);
     }
     _dump (){
         this.emit("dump_signal", false);

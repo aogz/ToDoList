@@ -37,7 +37,7 @@ var TaskItem = class TaskItem extends GObject.Object {
         this._label = new St.Entry({
             style_class: 'task-label',
             text: this.task.name,
-            can_focus: true
+            // can_focus: true
         });
         this.menu_item.actor.add_actor(this._label);
 

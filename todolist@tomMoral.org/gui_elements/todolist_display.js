@@ -91,8 +91,8 @@ var TodoList = class TodoList extends GObject.Object {
         this.newTask = new St.Entry({
             name: "newSectionEntry",
             hint_text: _("New Section..."),
-            track_hover: true,
-            can_focus: true
+            // track_hover: true,
+            // can_focus: true
         });
         let entryNewTask = this.newTask.clutter_text;
         entryNewTask.set_max_length(MAX_LENGTH);
@@ -155,7 +155,7 @@ var TodoList = class TodoList extends GObject.Object {
     }
     _set_text(){
         // Update status button
-        this.buttonText.set_text("ToDo ("+this.n_tasks+")");
+        this.buttonText.set_text("ToDo");
     }
     _clear(){
         for (var section of this.section_items){

@@ -29,8 +29,8 @@ RenameDialog.prototype = {
             name: "renameEntry",
             text: name,
             hint_text: name,
-            track_hover: true,
-            can_focus: true,
+            // track_hover: true,
+            // can_focus: true,
         });
         this.callback = function(text){
             debug('No callback??');
